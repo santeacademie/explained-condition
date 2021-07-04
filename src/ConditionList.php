@@ -99,14 +99,14 @@ class ConditionList
         return implode($separator, $this->getResolvedExplanations(null, true));
     }
 
-    public function stringifyResolvedRejections(string $separator = self::DEFAULT_SEPARATOR): string
-    {
-        return implode($separator, $this->getResolvedExplanations(false, true));
-    }
-
     public function stringifyResolvedAcceptations(string $separator = self::DEFAULT_SEPARATOR): string
     {
         return implode($separator, $this->getResolvedExplanations(true, true));
+    }
+
+    public function stringifyResolvedRejections(string $separator = self::DEFAULT_SEPARATOR): string
+    {
+        return implode($separator, $this->getResolvedExplanations(false, true));
     }
 
 }
